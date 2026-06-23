@@ -24,7 +24,20 @@ public class JobRestController {
 
     @PostMapping("jobPost")
     public JobPost addJob(@RequestBody JobPost jobPost){
-        return service.addJob(jobPost);
+        service.addJob(jobPost);
+        return service.getJob(jobPost.getPostId());
+    }
+
+    @PutMapping("jobPost")
+    public JobPost updateJob(@RequestBody JobPost jobPost){
+        service.updateJob(jobPost);
+        return service.getJob(jobPost.getPostId());
+    }
+
+    @DeleteMapping("jobPost/{postId}")
+    public String deleteJob(@PathVariable int postId){
+        service.deleteJob(postId);
+        return "Deleted";
     }
 
 }

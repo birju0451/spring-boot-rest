@@ -1,5 +1,4 @@
 package com.birju.spring_boot_rest.service;
-
 import com.birju.spring_boot_rest.model.JobPost;
 import com.birju.spring_boot_rest.repo.JobRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,21 +11,14 @@ public class JobService {
     @Autowired
     public JobRepo repo;
 
-
-    // method to add a jobPost
     public JobPost addJob(JobPost jobPost) {
         repo.addJob(jobPost);
         return jobPost;
     }
 
-
-    //method to return all JobPosts
     public List<JobPost> getAllJobs() {
         return repo.getAllJobs();
-
-
     }
-
 
     public JobPost getJob(int postId){
        return repo.getJob(postId);

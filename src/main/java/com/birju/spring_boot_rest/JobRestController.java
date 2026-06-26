@@ -10,6 +10,7 @@ import java.util.List;
 public class JobRestController {
     @Autowired
     private JobService service;
+    
 
     @GetMapping("jobPosts")
     @ResponseBody

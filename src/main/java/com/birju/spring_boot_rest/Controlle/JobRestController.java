@@ -1,4 +1,4 @@
-package com.birju.spring_boot_rest;
+package com.birju.spring_boot_rest.Controlle;
 import com.birju.spring_boot_rest.model.JobPost;
 import com.birju.spring_boot_rest.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.birju.spring_boot_rest.Controlle;
+package com.birju.spring_boot_rest.Controller;
 import com.birju.spring_boot_rest.model.JobPost;
 import com.birju.spring_boot_rest.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +27,7 @@ public class JobRestController {
     public List<JobPost> searchByKeyword(@PathVariable("keyword") String keyword){
         return  service.search(keyword);
     }
+
     @PostMapping("jobPost")
     public JobPost addJob(@RequestBody JobPost jobPost){
         service.addJob(jobPost);
